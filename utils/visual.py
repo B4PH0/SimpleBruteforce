@@ -10,5 +10,4 @@ def painel():
     text = " ____  __ __  ____  __  ______\n/ __ )/ // / / __ \/ / / / __ \ \n/ __  / // /_/ /_/ / /_/ / / / \n/ /_/ /__  __/ ____/ __  / /_/ /\n/_____/  /_/ /_/   /_/ /_/\____/"
     print(f'{color["red"]}{text}{color["reset"]}')
     print(f'{color["blue"]}         https://github.com/B4PH0{color["reset"]}\n')
-    print(f'{color["red"]}  Starting Bruteforce...')
-painel()
+    print(f'{color["red"]}      Starting bruteforce...')
