@@ -1,17 +1,16 @@
-from arguments import *
+from . import arguments
 import http.client
-import threading
-import io
 
 class brute:
     def __init__(self):
-        self.funcao = Parser()
+        self.funcao = arguments.Parser()
     
     def bruteforce(self):
         wordlist = self.funcao.argument_parser.wordlist
-        url = self.funcao.argument_parser.url
+        url = self.funcao.argument_parser.domain
         slash = "/"
-        with io.open(wordlist, mode="r", encoding='utf-8') as arquivo:
+        palavra = url.split()
+        with open(wordlist, mode="r", encoding='utf-8') as arquivo:
             for line in arquivo:
                 line = line.strip('\n')
                 directory = slash + line
@@ -22,12 +21,6 @@ class brute:
                 conn2 = http.client.HTTPConnection(url)
                 conn2.request("GET", directory)
                 response2 = conn2.getresponse()
-                if response2 == 200:
-                    print(f'{url}{directory} | 200 CODE')
-                elif response2 == 401:
-                    print(f'{url}{directory} | 401 CODE')
-                else:
-                    print(f'{url}{directory} | {response2.status} CODE')
+                if response2.status != 404:
+                    print(f'{url}{directory} | {response2.status}')
             conn.close()
-objeto = brute()
-objeto.bruteforce()
