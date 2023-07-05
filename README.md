@@ -1,7 +1,7 @@
 # PythonBrute
 
 # Descrição
-  Um simples programa que eu criei como um exercicío, um bruteforce em python. eu sei que python não é a melhor linguagem em questão de velocidade, até por que para um bruteforce a questão principal é a velocidade de requisições a um site, mas como eu citei, é apenas um exercicio. Utilizei uma documentação low level para fazer a parte de requisições, eu chuto que uma requisição é 0.4 segundos, e em requests era 0.9 segundos, optei pela low level por ser mais rápida. Eu não recomendo o uso por ser mais lento que outros bruteforces, como o dirb ou gobuster. Mas se quiserem, a vontade.
+  Um simples programa que criei como exercício, um brute force em Python. Eu sei que Python não é a melhor linguagem em termos de velocidade, especialmente para um brute force, onde a velocidade das requisições a um site é crucial. No entanto, como mencionei anteriormente, é apenas um exercício. Utilizei uma documentação de baixo nível para lidar com as requisições, e estimo que uma requisição leve cerca de 0,4 segundos, enquanto com a biblioteca requests seria cerca de 0,9 segundos. Optei pela abordagem de baixo nível para obter mais velocidade. Não recomendo o uso deste programa, pois ele é mais lento do que outras ferramentas de brute force, como o Dirb ou o Gobuster. Mas se quiserem experimentar, sintam-se à vontade.
 
 # Instalação
 git clone https://github.com/B4PH0/SimpleBruteforce
